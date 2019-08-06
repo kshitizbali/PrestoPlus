@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="SignupViewModel"
+            type="com.kshitizbali.presto.viewmodels.SignupViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back4"
+        tools:context=".view.MainActivity">
+
+
+        <ImageView
+            android:id="@+id/ivRestImage"
+            android:layout_width="@dimen/iv_logo_dimen"
+            android:layout_height="@dimen/iv_logo_dimen"
+            android:background="#00070707"
+            android:contentDescription="@string/restaurant_image"
+            android:src="@drawable/my_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/lotti_image"
+            android:minHeight="@dimen/lotti_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivRestImage"
+            app:layout_constraintVertical_bias="0.0"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/food_corousal" />
+
+        <TextView
+            android:id="@+id/tvLoyInfoTitle"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="#45070707"
+            android:fontFamily="cursive"
+            android:text="@string/thanks_for_your_loyalty_now_its_out_turn"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/animation_view"
+            app:layout_constraintStart_toStartOf="@+id/animation_view"
+            app:layout_constraintTop_toBottomOf="@+id/animation_view" />
+
+        <Button
+            android:id="@+id/btSignUp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:drawableStart="@drawable/ic_sign_24dp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/tvLoyInfoTitle"
+            app:layout_constraintStart_toStartOf="@+id/tvLoyInfoTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvLoyInfoTitle" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:animateLayoutChanges="true"
+            app:constraint_referenced_ids="animation_view,tvLoyInfoTitle,btSignUp" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:animateLayoutChanges="true"
+            app:constraint_referenced_ids="tvSignUpTitle,cvSIgnUp" />
+
+        <TextView
+            android:id="@+id/tvSignUpTitle"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="cursive"
+            android:text="@string/sign_up_it_s_free"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/ivRestImage"
+            app:layout_constraintStart_toStartOf="@+id/ivRestImage"
+            app:layout_constraintTop_toBottomOf="@+id/ivRestImage" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSIgnUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            app:cardBackgroundColor="#F3FFFFFF"
+            app:cardCornerRadius="@dimen/card_corner_rad"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSignUpTitle">
+
+            <!--<include
+                layout="@layout/layout_signup_module"
+                android:background="#00F0EDED" />-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00F0EDED"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivCancelSignup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/cancel_signup"
+                    android:src="@drawable/ic_cancel_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_first_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.06"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/atvFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="@string/digits_name_all"
+                        android:drawableStart="@drawable/ic_person_pin_circle_yellow_24dp"
+                        android:drawablePadding="@dimen/drawable_padding"
+                        android:hint="@string/first_name"
+                        android:text="@={SignupViewModel.firstName}"
+                        android:textColor="@android:color/darker_gray" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_last_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/til_first_name"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/til_first_name"
+                    app:layout_constraintTop_toBottomOf="@+id/til_first_name">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/atvLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="@string/digits_name_all"
+                        android:drawableStart="@drawable/ic_person_pin_circle_yellow_24dp"
+                        android:drawablePadding="@dimen/drawable_padding"
+                        android:hint="@string/last_name"
+                        android:text="@={SignupViewModel.lastName}"
+                        android:textColor="@android:color/darker_gray" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/til_last_name"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/til_last_name"
+                    app:layout_constraintTop_toBottomOf="@+id/til_last_name">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/atvEmailId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="@string/digits_email_allow"
+                        android:drawableStart="@drawable/ic_email_24dp"
+                        android:drawablePadding="@dimen/drawable_padding"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:text="@={SignupViewModel.email}"
+                        android:textColor="@android:color/darker_gray" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/til_email"
+                    app:layout_constraintStart_toStartOf="@+id/til_email"
+                    app:layout_constraintTop_toBottomOf="@+id/til_email">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/atvPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="@string/digits_phone_allow"
+                        android:drawableStart="@drawable/ic_smartphone_24dp"
+                        android:drawablePadding="@dimen/drawable_padding"
+                        android:hint="@string/phone"
+                        android:inputType="phone"
+                        android:text="@={SignupViewModel.phone}"
+                        android:textColor="@android:color/darker_gray" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/btSignUpFinal"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:onClick="@{(v) -> SignupViewModel.onClick(v)}"
+                    android:text="@string/sign_up"
+                    android:drawableStart="@drawable/ic_sign_up_24dp"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/til_phone"
+                    app:layout_constraintStart_toStartOf="@+id/til_phone"
+                    app:layout_constraintTop_toBottomOf="@+id/til_phone" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btSignUpFinal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

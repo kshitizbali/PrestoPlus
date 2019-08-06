@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+   <!-- <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_first_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/atvFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="@string/digits_name_all"
+            android:drawableStart="@drawable/ic_person_pin_circle_yellow_24dp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:hint="@string/first_name"
+            android:textColor="@android:color/darker_gray" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_last_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/til_first_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/til_first_name"
+        app:layout_constraintTop_toBottomOf="@+id/til_first_name">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/atvLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="@string/digits_name_all"
+            android:drawableStart="@drawable/ic_person_pin_circle_yellow_24dp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:hint="@string/last_name"
+            android:textColor="@android:color/darker_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/til_last_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/til_last_name"
+        app:layout_constraintTop_toBottomOf="@+id/til_last_name">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/atvEmailId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="@string/digits_email_allow"
+            android:drawableStart="@drawable/ic_email_24dp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/darker_gray" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/til_email"
+        app:layout_constraintStart_toStartOf="@+id/til_email"
+        app:layout_constraintTop_toBottomOf="@+id/til_email">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/atvPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="@string/digits_phone_allow"
+            android:drawableStart="@drawable/ic_smartphone_24dp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:hint="@string/phone"
+            android:inputType="phone"
+            android:textColor="@android:color/darker_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btSignUp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/sign_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/til_phone"
+        app:layout_constraintStart_toStartOf="@+id/til_phone"
+        app:layout_constraintTop_toBottomOf="@+id/til_phone" />
+-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

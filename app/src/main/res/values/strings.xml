@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Presto+</string>
+    <string name="restaurant_image">Restaurant Image</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="thanks_for_your_loyalty_now_its_out_turn">Thanks for your loyalty, now its out turn.</string>
+    <string name="sign_up_it_s_free">Sign up. It\'s free.</string>
+    <string name="first_name">First Name</string>
+    <string name="email">Email</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone">Phone</string>
+    <string name="digits_name_all">qwertzuiopasdfghjklyxcvbnm</string>
+    <string name="digits_email_allow">0123456789qwertzuiopasdfghjklyxcvbnm.@</string>
+    <string name="digits_phone_allow">0123456789</string>
+    <string name="welcome_to_the_family">Welcome to the Eat Inc. family</string>
+    <string name="ok_icon">Ok Icon</string>
+    <string name="cancel_signup">Cancel Signup</string>
+    <string name="all_done">All Done</string>
+</resources>
