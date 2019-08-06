@@ -17,3 +17,4 @@ Key Points :-
 7) Max Supported SDK -> 28 (Pie, Since Q is not yet fully stable or released)
 8) Lottie library for image animations
 9) Acitivity supports potrait mode only which is more suited to restaurant apps signup activity.
+10) Lottie image animation continuous loop may interfere with the Unit Test written.
