@@ -10,7 +10,7 @@ P.S - It is really satisfying to now have to write findviewbyid() method again a
 Key Points :-
 1) Implemented "MVVM" along with "LiveData" library. Since livedata library is android lifecycle friendly, we dont have to remove and start new observers on "onResume" and "onPause" methods.
 2) Wrote some unit tests.
-3) Background is the best i could get in a short splan of time
+3) Background is the best i could get in a short span of time
 4) Animations can improve the user experience a great deal.
 5) Since there was no actual API consumption, had to mimick the effect by using Handle and Runnable.
 6) Min Supported SDK -> 18 (Jellybean)
